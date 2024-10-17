@@ -1,6 +1,6 @@
   body {
     background-color: #242424;
-    background-image: url('./assets/fondo-pokemon.png');
+    background-image: url('fondo-pokemon.png');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;

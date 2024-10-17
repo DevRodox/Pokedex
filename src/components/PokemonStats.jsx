@@ -20,7 +20,7 @@ export const PokemonStats = ({ pokemonStats, getPokemon }) => {
                 <button className="btn btn-primary mt-3 mb-4" onClick={getPokemon}>
                     Mostrar Pokemón
                 </button>
-                <img className="blinking-button" src='/button.gif' />
+                <img className="blinking-button" src='button.gif' />
             </div>
         </>
     );
