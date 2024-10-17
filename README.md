@@ -7,6 +7,9 @@ Este proyecto es una Pokédex web desarrollada con **React**, **Bootstrap** y **
 - Estilizado con Bootstrap para un diseño limpio y adaptable.
 - Utiliza Axios para consumir la API de PokeAPI.
 
+
+[https://devrodox.github.io/Pokedex/](https://devrodox.github.io/Pokedex/)
+
 <br/>
 
 ![Pokémon](./src/assets/pokemonFinal.png)
