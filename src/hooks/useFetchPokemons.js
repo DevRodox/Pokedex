@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { pokeApi } from "../api";
+import { capitalizeFirstLetter } from "../helpers/capitalizeFirstLetter ";
 
 export const useFetchPokemons = () => {
     
@@ -8,7 +9,8 @@ export const useFetchPokemons = () => {
         name: '',
         image: '',
         pokemonStats: {},
-        pokemonTypes: []
+        pokemonTypes: [],
+        pokemonAbilities: []
     });
 
     useEffect(() => {
@@ -28,7 +30,7 @@ export const useFetchPokemons = () => {
 
             const { data } = await pokeApi.get(`/pokemon/${ randomNumber }`);
             
-            const { name, sprites, stats, types } = data;
+            const { name, sprites, stats, types, abilities } = data;
             const { front_default: image } = sprites.other['official-artwork'];
 
             const pokemonStats = stats.map( stat => ({
@@ -40,11 +42,16 @@ export const useFetchPokemons = () => {
                 type.type.name
             ]));
 
+            const pokemonAbilities = abilities.map( ability => ([
+                ability.ability.name
+            ]));
+
             setPokemon({
-                name,
+                name: capitalizeFirstLetter( name ),
                 image,
                 pokemonStats,
-                pokemonTypes
+                pokemonTypes,
+                pokemonAbilities
             });
 
         } catch (error) {

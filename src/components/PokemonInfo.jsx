@@ -1,22 +1,25 @@
+import { PokemonAbilities } from "./PokemonAbilities";
+import { PokemonTypes } from "./PokemonTypes";
 
-export const PokemonInfo = ({ name, getPokemon, pokemonTypes }) => {
-    console.log(pokemonTypes);
+export const PokemonInfo = ({ name, pokemonTypes, pokemonAbilities }) => {
+   
+    
     return (
         <>
             <div className="mt-3">
                 <div className="pokemon-name">{name}</div>
-                <div className="text-white p-2 mt-2 rounded">
+                <div className="pokemon-abilities">
+                    Habilities: <br/>
+                    { pokemonAbilities.map( ability => (
+                        <PokemonAbilities key={ ability } ability={ ability }/>
+                    ))}
+                </div>
+                <div className="text-white p-2 mt-2 rounded mb-2">
                     { pokemonTypes.map( type => (
-                        <span key={ type } className={ `type-label ${ type }` }> 
-                            { type } 
-                        </span>
+                        <PokemonTypes key={ type } type={ type } />
                     ))}
                 </div>
             </div>
-
-            <button className="btn btn-primary mt-3 mb-4" onClick={ getPokemon }>
-                Mostrar Pokemón
-            </button>
         </>
     );
 };
