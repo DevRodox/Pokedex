@@ -11,7 +11,10 @@ export const PruebaTecnicaApp = () => {
           getPokemon, isLoading } = useFetchPokemons();
 
   return (
-    <div className="container">
+    <div className="container ">
+
+      <img src='fondoPokemon.png' alt="Fondo Pokémon" className="background-image" />
+
       <div className="pokedex row">
         {
           isLoading && (<h2> Cargando... </h2>)
