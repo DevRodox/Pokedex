@@ -5,12 +5,17 @@ import { PokemonInfo, PokemonImage, PokemonStats } from './components';
 import './Pokedex.css';
 
 export const PruebaTecnicaApp = () => {
-  const { name, image, pokemonStats, pokemonTypes, pokemonAbilities, getPokemon } = useFetchPokemons();
+  
+  const { name, image, pokemonStats, 
+          pokemonTypes, pokemonAbilities, 
+          getPokemon, isLoading } = useFetchPokemons();
 
   return (
     <div className="container">
       <div className="pokedex row">
-        
+        {
+          isLoading && (<h2> Cargando... </h2>)
+        }
         <div className="col-md-6">
           <PokemonImage image={ image } name={ name } />
           <PokemonInfo 
