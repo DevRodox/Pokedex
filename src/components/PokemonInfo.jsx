@@ -1,11 +1,16 @@
 
-export const PokemonInfo = ({ name, getPokemon }) => {
+export const PokemonInfo = ({ name, getPokemon, pokemonTypes }) => {
+    console.log(pokemonTypes);
     return (
         <>
             <div className="mt-3">
-                <input type="text" className="form-control w-50" value={name} readOnly />
-                <div className="bg-success text-white p-2 mt-2 rounded">
-                    {name ? `${name} es un Pokémon...` : 'Selecciona un Pokémon para ver detalles.'}
+                <div className="pokemon-name">{name}</div>
+                <div className="text-white p-2 mt-2 rounded">
+                    { pokemonTypes.map( type => (
+                        <span key={ type } className={ `type-label ${ type }` }> 
+                            { type } 
+                        </span>
+                    ))}
                 </div>
             </div>
 

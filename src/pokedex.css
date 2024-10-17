@@ -5,6 +5,8 @@
     background-position: center; 
     background-repeat: no-repeat;
     min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
   }
 
   .pokedex {
@@ -29,6 +31,13 @@
     object-fit: contain;
   }
   
+
+  .pokemon-name {
+      font-size: 2rem;
+      color: white; 
+  }
+
+
   .stats {
     background-color: #1c2d41;
     color: white;
@@ -42,4 +51,34 @@
     min-height: 200px;
   }
 
-  
+  .type-label {
+    display: inline-block;
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    border-radius: 12px;
+    font-size: 14px; 
+    text-align: center;
+  }
+
+
+
+  /* Variables color tipo pokemon */
+
+  .water { background-color: #4592c4; }
+  .electric { background-color: #bba909; }
+  .fire { background-color: #ff7402; }
+  .grass { background-color: #9bcc50; }
+  .poison { background-color: #7e0058; }
+  .bug { background-color: #729f3f; }
+  .dragon { background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%); }
+  .flying { background-color: #3dc7ef; }
+  .ground { background-color: #ab9842; }
+  .steel { background-color: #9eb7b8; }
+  .psychic { background-color: #f366b9; }
+  .ice { background-color: #51c4e7; }
+  .ghost { background-color: #4d5b64; }
+  .normal { background-color: #a4acaf; }
+  .rock { background-color: #a38c21; }
+  .fighting { background-color: #d56723; }
+  .fairy { background-color: #fdb9e9; }
+  .dark { background-color: #707070; }

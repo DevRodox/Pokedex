@@ -5,7 +5,7 @@ import { PokemonInfo, PokemonImage, PokemonStats } from './components';
 import './Pokedex.css';
 
 export const PruebaTecnicaApp = () => {
-  const { name, image, statsPokemon, getPokemon } = useFetchPokemons();
+  const { name, image, pokemonStats, pokemonTypes, getPokemon } = useFetchPokemons();
 
   return (
     <div className="container">
@@ -13,11 +13,11 @@ export const PruebaTecnicaApp = () => {
         
         <div className="col-md-6">
           <PokemonImage  image={ image } name={ name } />
-          <PokemonInfo name={ name } getPokemon={ getPokemon } />
+          <PokemonInfo name={ name } pokemonTypes = { pokemonTypes } getPokemon={ getPokemon } />
         </div>
 
         <div className="col-md-6">
-          <PokemonStats statsPokemon={ statsPokemon }/>
+          <PokemonStats pokemonStats={ pokemonStats }/>
         </div>
 
       </div>
