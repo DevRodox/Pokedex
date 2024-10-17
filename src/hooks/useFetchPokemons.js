@@ -6,7 +6,8 @@ export const useFetchPokemons = () => {
     
     const [ pokemon, setPokemon ] = useState({
         name: '',
-        image: ''
+        image: '',
+        statsPokemon: {}
     });
 
     useEffect(() => {
@@ -19,12 +20,19 @@ export const useFetchPokemons = () => {
             let randomNumber = Math.floor(Math.random() * 1025) + 1;
 
             const { data } = await pokeApi.get(`/pokemon/${ randomNumber }`);
-            const { name, sprites } = data;
+            
+            const { name, sprites, stats } = data;
             const { front_default: image } = sprites.other['official-artwork'];
+
+            const statsPokemon = stats.map( stat => ({
+                base_stat: stat.base_stat,
+                name: stat.stat.name
+            }));
 
             setPokemon({
                 name,
-                image
+                image,
+                statsPokemon
             });
 
         } catch (error) {
