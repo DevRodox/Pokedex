@@ -1,5 +1,4 @@
-import { PokemonAbilities } from "./PokemonAbilities";
-import { PokemonTypes } from "./PokemonTypes";
+import { PokemonAbilities, PokemonTypes } from "./";
 
 export const PokemonInfo = ({ name, pokemonTypes, pokemonAbilities }) => {
    
