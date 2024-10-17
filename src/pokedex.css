@@ -31,12 +31,10 @@
     object-fit: contain;
   }
   
-
   .pokemon-name {
       font-size: 2rem;
       color: white; 
   }
-
 
   .stats {
     background-color: #1c2d41;
@@ -60,6 +58,14 @@
     text-align: center;
   }
 
+  .blinking-button{
+    position: absolute;
+    right: 20px;
+    top: 50%; 
+    transform: translateY(-50%);
+    max-width: 30px;
+    max-height: 30px;
+  }
 
 
   /* Variables color tipo pokemon */

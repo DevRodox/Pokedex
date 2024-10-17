@@ -15,9 +15,13 @@ export const PokemonStats = ({ pokemonStats, getPokemon }) => {
                     )}
                 </div>
             </div>
-            <button className="btn btn-primary mt-3 mb-4" onClick={ getPokemon }>
-                Mostrar Pokemón
-            </button>
+            
+            <div style={{ position: "relative" }}>
+                <button className="btn btn-primary mt-3 mb-4" onClick={getPokemon}>
+                    Mostrar Pokemón
+                </button>
+                <img className="blinking-button" src='/public/button.gif' />
+            </div>
         </>
     );
 };
