@@ -1,7 +1,12 @@
-body {
+  body {
     background-color: #242424;
+    background-image: url('./assets/fondo-pokemon.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
   }
-  
+
   .pokedex {
     background-color: #d12e2e;
     border-radius: 15px;

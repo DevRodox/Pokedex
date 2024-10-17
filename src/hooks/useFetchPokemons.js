@@ -12,6 +12,12 @@ export const useFetchPokemons = () => {
 
     useEffect(() => {
         getPokemon();
+
+        const intervalId = setInterval(() => {
+            getPokemon();
+        }, 30000);
+
+        return () => clearInterval(intervalId);
     }, []);
 
     const getPokemon = async() => {
