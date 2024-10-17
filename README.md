@@ -1,8 +1,12 @@
-# React + Vite
+# Prueba Técnica Pokedex 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una Pokédex web desarrollada con **React**, **Bootstrap** y **Axios**. Consume datos de la [PokeAPI](https://pokeapi.co/) y muestra dinámicamente diferentes Pokémon cada 30 segundos o cuando el usuario presiona un botón. El diseño está mejorado con Bootstrap, mientras que Axios gestiona las solicitudes a la API.
 
-Currently, two official plugins are available:
+## Características:
+- Muestra un nuevo Pokémon cada 30 segundos o mediante la interacción con un botón.
+- Estilizado con Bootstrap para un diseño limpio y adaptable.
+- Utiliza Axios para consumir la API de PokeAPI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+
+![Pokémon](./src/assets/pokemonFinal.png)
