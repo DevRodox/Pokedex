@@ -10,6 +10,11 @@ Este proyecto es una Pokédex web desarrollada con **React**, **Bootstrap** y **
 
 [https://devrodox.github.io/Pokedex/](https://devrodox.github.io/Pokedex/)
 
+
+
+    yarn     //Descargar Node_Modules
+    yarn dev //Para Correr el proyecto
+
 <br/>
 
 ![Pokémon](./src/assets/pokemonFinal.png)
